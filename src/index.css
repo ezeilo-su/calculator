@@ -1,1 +1,7 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+html {
+  overflow-x: hidden;
+}
+
+html body {
+  overflow-x: hidden;
+}
