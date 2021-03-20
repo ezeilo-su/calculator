@@ -20,7 +20,8 @@
 		"react/react-in-jsx-scope": "off",
 		"import/no-unresolved": "off",
 		"no-shadow": "off",
-		"arrow-parens": ["error", "as-needed"]
+		"arrow-parens": ["error", "as-needed"],
+		"class-methods-use-this": "off"
 	},
 	"ignorePatterns": [
 		"dist/",
