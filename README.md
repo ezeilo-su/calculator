@@ -2,7 +2,7 @@
 
 In this milestone, the following tasks were done:
 
-- Create a new Calculator app in React using ```create-react-app```.
+- Create a new Calculator app in React using ```App``` ```Display``` ```ButtonPanel``` ```Button```.
 
 - Install app dependencies (```npm install --save prop-types``` ```npm install big.js```).
 

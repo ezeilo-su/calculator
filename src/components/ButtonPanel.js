@@ -10,14 +10,12 @@ const keyMap = [
 ];
 
 class ButtonPanel extends Component {
-  renderButton(key) {
-    return (
-      <Button
-        uniqueKey={`key-${key}`}
-        name={keyMap[key]}
-      />
-    );
-  }
+  renderButton = key => (
+    <Button
+      uniqueKey={`key-${key}`}
+      name={keyMap[key]}
+    />
+  )
 
   render() {
     return (
