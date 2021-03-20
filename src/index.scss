@@ -5,3 +5,42 @@ html {
     overflow-x: hidden;
   }
 }
+
+.app {
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+.button-panel {
+  margin-top: 0;
+  padding: 0;
+
+  .calc-key {
+    width: 100px;
+    height: 50px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .button-row {
+    width: 400px;
+  }
+
+  .key-16 {
+    width: 50%;
+  }
+}
+
+.display {
+  margin-top: 40px;
+  outline: none;
+  width: 400px;
+  height: 50px;
+  text-align: right;
+  margin-bottom: 0;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 65px;
+  background-color: #fff;
+  border: 1px solid #999;
+}
