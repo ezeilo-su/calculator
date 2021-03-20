@@ -1,21 +1,9 @@
-import React, { Component } from "react";
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Calculator from './components/Calculator'
-
-
-
-
-
-
-
-
-
-
-
-
+import Calculator from './components/Calculator';
 
 ReactDOM.render(
   <Calculator />,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
