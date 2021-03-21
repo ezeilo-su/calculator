@@ -4,9 +4,9 @@ In this milestone, the following tasks were done:
 
 - Implement the following modules ```calculate``` ```operate``` in the ```logic``` directory.
 
-- Import and call ```calculate``` module in ```App``` component.
+- Import and use ```calculate``` module in ```App``` component.
 
-- Import and call ```operate``` module in ```calculate``` module.
+- Import and use ```operate``` module in ```calculate``` module.
 
 
 ## 📝 Setup
