@@ -23,6 +23,7 @@ html body {
 .button-panel .button-row .calc-key {
   width: 25%;
   height: 25px;
+  cursor: unset;
   font-size: 12px;
   font-weight: bold;
 }
