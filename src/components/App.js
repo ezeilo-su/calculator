@@ -6,7 +6,7 @@ import calculate from '../logic/calculate';
 const App = () => (
   <div className="app center">
     <Display />
-    <ButtonPanel />
+    <ButtonPanel calculate={calculate} />
   </div>
 );
 
