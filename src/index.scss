@@ -1,7 +1,89 @@
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 992px;
+
 html {
   overflow-x: hidden;
 
   body {
     overflow-x: hidden;
+  }
+}
+
+.app {
+  max-width: 270px;
+  margin: 0 auto;
+}
+
+.button-panel {
+  margin-top: 0;
+  padding: 0;
+
+  .button-row {
+    max-width: 240px;
+
+    .calc-key {
+      width: 25%;
+      height: 25px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .key-16 {
+      width: 50%;
+    }
+
+    .key-3,
+    .key-7,
+    .key-11,
+    .key-15,
+    .key-18 {
+      background-color: #f94;
+    }
+  }
+}
+
+.display {
+  margin-top: 30px;
+  outline: none;
+  width: 240px;
+  height: 25px;
+  color: #fff;
+  text-align: right;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 25px;
+  background-color: #889;
+  border: 1px solid #999;
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .app {
+    max-width: 400px;
+  }
+
+  .button-panel {
+    .button-row {
+      max-width: 400px;
+
+      .calc-key {
+        width: 100px;
+        height: 50px;
+        font-size: 14px;
+      }
+
+      .key-16 {
+        width: 50%;
+      }
+    }
+  }
+
+  .display {
+    margin-top: 40px;
+    width: 400px;
+    height: 50px;
+    margin-bottom: 0;
+    font-size: 24px;
+    line-height: 50px;
   }
 }

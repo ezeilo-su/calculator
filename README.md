@@ -2,11 +2,7 @@
 
 In this milestone, the following tasks were done:
 
-- Create a new Calculator app in React using ```create-react-app```.
-
-- Install app dependencies (```npm install --save prop-types``` ```npm install big.js```).
-
-- Setup ```eslint```, ```stylelint```, ```github workflows```.
+- Implement and render the following components ```App``` ```Display``` ```ButtonPanel``` ```Button```.
 
 - Deploy app on ```heroku```.
 
@@ -17,7 +13,7 @@ In this milestone, the following tasks were done:
  
  - Clone this app: 
         ```
-        git clone https://github.com/ezeilo-su/js-weather-app
+        git clone https://github.com/ezeilo-su/calculator
         ```
 
 - ```cd``` into the app directory.
