@@ -2,9 +2,11 @@
 
 In this milestone, the following tasks were done:
 
-- Implement and render the following components ```App``` ```Display``` ```ButtonPanel``` ```Button```.
+- Implement the following modules ```calculate``` ```operate``` in the ```logic``` directory.
 
-- Deploy app on ```heroku```.
+- Import and use ```calculate``` module in ```App``` component.
+
+- Import and use ```operate``` module in ```calculate``` module.
 
 
 ## 📝 Setup
