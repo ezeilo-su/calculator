@@ -7,7 +7,7 @@ const operate = (numberOne, numberTwo, operation) => {
 
   switch (operation) {
     case '%':
-      result = firstNumber / 100;
+      result = firstNumber * Big(0.01);
       break;
 
     case '÷':
@@ -27,7 +27,7 @@ const operate = (numberOne, numberTwo, operation) => {
       break;
 
     default:
-      break;
+      return Error;
   }
   return result;
 };
