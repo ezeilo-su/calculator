@@ -20,6 +20,8 @@
 		"react/react-in-jsx-scope": "off",
 		"import/no-unresolved": "off",
 		"no-shadow": "off",
+		"prefer-const": "off",
+		"react/destructuring-assignment": "off",
 		"arrow-parens": ["error", "as-needed"]
 	},
 	"ignorePatterns": [

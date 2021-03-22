@@ -1,20 +1,20 @@
 import operate from './operate';
 
-const calculate = (calcData, btnName) => {
-  let { total, next } = calcData;
-  const { operation } = calcData;
-
+const calculate = ({ total, next, operation }, btnName) => {
+  let cTotal = total;
+  let cNext = next;
+  const cOperation = operation;
   switch (btnName) {
     case '+/-':
-      total *= -1;
-      next *= -1;
+      cTotal *= -1;
+      cNext *= -1;
       break;
 
     default:
-      total = operate(total, next, operation);
+      cTotal = operate(cTotal, cNext, cOperation);
       break;
   }
-  return { total, next, operation };
+  return { cTotal, cNext, cOperation };
 };
 
 export default calculate;
