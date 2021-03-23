@@ -20,22 +20,23 @@ html body {
   max-width: 240px;
 }
 
-.button-panel .button-row .calc-key {
+.button-panel .button-row .calc-button {
   width: 25%;
   height: 25px;
+  cursor: unset;
   font-size: 12px;
   font-weight: bold;
 }
 
-.button-panel .button-row .key-16 {
+.button-panel .button-row .zero {
   width: 50%;
 }
 
-.button-panel .button-row .key-3,
-.button-panel .button-row .key-7,
-.button-panel .button-row .key-11,
-.button-panel .button-row .key-15,
-.button-panel .button-row .key-18 {
+.button-panel .button-row .plus,
+.button-panel .button-row .minus,
+.button-panel .button-row .divide,
+.button-panel .button-row .multiply,
+.button-panel .button-row .equal-sign {
   background-color: #f94;
 }
 
@@ -61,12 +62,11 @@ html body {
   .button-panel .button-row {
     max-width: 400px;
   }
-  .button-panel .button-row .calc-key {
-    width: 100px;
+  .button-panel .button-row .calc-button {
     height: 50px;
     font-size: 14px;
   }
-  .button-panel .button-row .key-16 {
+  .button-panel .button-row .zero {
     width: 50%;
   }
   .display {
