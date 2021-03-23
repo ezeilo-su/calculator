@@ -11,6 +11,9 @@ const operate = (numberOne, numberTwo, operation) => {
       break;
 
     case '÷':
+      if (Number(numberTwo) === 0) {
+        return 'Math Error';
+      }
       result = firstNumber / secondNumber;
       break;
 
