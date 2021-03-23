@@ -1,9 +1,9 @@
 import Big from 'big.js';
 
 const operate = (numberOne, numberTwo, operation) => {
-  let result = new Big();
-  const firstNumber = Big(numberOne);
-  const secondNumber = Big(numberTwo);
+  let result;
+  const firstNumber = new Big(numberOne);
+  const secondNumber = new Big(numberTwo);
 
   switch (operation) {
     case '%':
@@ -27,9 +27,9 @@ const operate = (numberOne, numberTwo, operation) => {
       break;
 
     default:
-      return Error;
+      return 'Error';
   }
-  return result;
+  return result.toString();
 };
 
 export default operate;
