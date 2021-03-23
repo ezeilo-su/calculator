@@ -1,13 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
-
-// const keyMap = [
-//   'AC', '+/-', '%', '÷',
-//   '7', '8', '9', '×',
-//   '4', '5', '6', '-',
-//   '1', '2', '3', '+',
-//   '0', '.', '=',
-// ];
 
 const buttons = [
   { name: 'AC', slug: 'ac' }, { name: '+/-', slug: 'plus-minus' }, { name: '%', slug: 'percent' }, { name: '÷', slug: 'divide' },
@@ -17,17 +10,23 @@ const buttons = [
   { name: '0', slug: 'zero' }, { name: '.', slug: 'period' }, { name: '=', slug: 'equal-sign' },
 ];
 
-const ButtonPanel = () => (
-  <div className="button-panel">
-    <div className="button-row">
-      {buttons.map(button => (
-        <Button
-          key={`key-${button.slug}`}
-          name={button.name}
-        />
-      ))}
+export default function ButtonPanel(props) {
+  return (
+    <div className="button-panel">
+      <div className="button-row">
+        {buttons.map(button => (
+          <Button
+            key={button.slug}
+            name={button.name}
+            slug={button.slug}
+            clickHandler={() => props.clickHandler(button.name)}
+          />
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+}
 
-export default ButtonPanel;
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.func.isRequired,
+};

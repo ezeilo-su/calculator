@@ -1,18 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({ key, name }) => (
-  <button
-    className={`calc-key ${key}`}
-    type="button"
-  >
-    {name}
-  </button>
-);
+export default function Button(props) {
+  return (
+    <button
+      className={`calc-button ${props.slug}`}
+      type="button"
+      onClick={props.clickHandler}
+    >
+      {props.name}
+    </button>
+  );
+}
 
 Button.propTypes = {
   name: PropTypes.string.isRequired,
-  key: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
+  clickHandler: PropTypes.func.isRequired,
 };
-
-export default Button;

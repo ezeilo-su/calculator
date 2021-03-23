@@ -3,30 +3,30 @@ import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
 
-class App extends Component {
+export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      total: '',
-      next: '',
-      operation: '',
+      total: null,
+      next: null,
+      operation: null,
     };
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(buttonName) {
     const nextState = calculate({ ...this.state }, buttonName);
-    this.setState(prevState => ({ ...prevState }, { ...nextState }));
+    this.setState(prevState => ({ ...prevState, ...nextState }));
   }
 
   render() {
     return (
       <div className="app">
-        <Display />
+        <Display
+          val={this.state.operation && this.state.next ? this.state.next : this.state.total || '0'}
+        />
         <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );
   }
 }
-
-export default App;
