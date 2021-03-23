@@ -17,12 +17,7 @@ const App = () => {
       operation: state.operation,
     }, buttonName);
 
-    nextState = {
-      total: 'total' in nextState ? nextState.total : state.total,
-      next: 'next' in nextState ? nextState.next : state.next,
-      operation: 'operation' in nextState ? nextState.operation : state.operation,
-    };
-    setState(nextState);
+    setState({ ...state, ...nextState });
   };
 
   return (
