@@ -46,9 +46,15 @@ const calculate = (calcData, buttonName) => {
           return { total: buttonName, operation: null };
         }
         if (operation) {
-          return { next: !Number(next) ? buttonName : next + buttonName };
+          if (next === '0' && buttonName === '.') {
+            return { next: '0.' };
+          }
+          return { next: next && (next !== '0') ? next + buttonName : buttonName };
         }
-        return { total: !Number(total) ? buttonName : total + buttonName };
+        if (total === '0' && buttonName === '.') {
+          return { total: '0.' };
+        }
+        return { total: total && (total !== '0') ? total + buttonName : buttonName };
       }
   }
   return {};
