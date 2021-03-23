@@ -11,7 +11,7 @@ const App = () => {
   });
 
   const handleClick = buttonName => {
-    let nextState = calculate({
+    const nextState = calculate({
       total: state.total,
       next: state.next,
       operation: state.operation,
