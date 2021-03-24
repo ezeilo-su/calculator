@@ -19,23 +19,12 @@ const calculate = (calcData, buttonName) => {
     case '×':
     case '-':
     case '+':
+    case '=':
       if (!total) {
         return {};
       }
-      if (total && next) {
-        total = operate(total, next, operation);
-        return { total, next: null, operation: buttonName };
-      }
-      return { operation: buttonName };
-
-    case '=':
-      if (total && next) {
-        total = operate(total, next, operation);
-        return { total, next: null, operation: buttonName };
-      } if (total) {
-        return { total: parseFloat(total).toString(), operation: buttonName };
-      }
-      return {};
+      total = operate(total, next, operation);
+      return { total, next: null, operation: buttonName };
 
     default:
       if (total && buttonName === '%') {
