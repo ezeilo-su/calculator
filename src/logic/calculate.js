@@ -22,6 +22,10 @@ const calculate = (calcData, buttonName) => {
       if (!total) {
         return {};
       }
+      if (total && next) {
+        total = operate(total, next, operation);
+        return { total, next: null, operation: buttonName };
+      }
       return { operation: buttonName };
 
     case '=':
@@ -29,7 +33,7 @@ const calculate = (calcData, buttonName) => {
         total = operate(total, next, operation);
         return { total, next: null, operation: buttonName };
       } if (total) {
-        return { total, operation: buttonName };
+        return { total: parseFloat(total).toString(), operation: buttonName };
       }
       return {};
 

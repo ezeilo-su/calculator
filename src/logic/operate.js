@@ -32,7 +32,7 @@ const operate = (numberOne, numberTwo, operation) => {
     default:
       return 'Error';
   }
-  return result.toString();
+  return parseFloat(result).toString();
 };
 
 export default operate;
