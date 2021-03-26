@@ -9,23 +9,71 @@ html {
   }
 }
 
-.app {
-  max-width: 270px;
-  margin: 0 auto;
+.navbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  padding: 0 50px;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  justify-content: space-between;
+
+  .nav-brand {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .nav-links {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      font-size: 24px;
+      text-decoration: none;
+    }
+  }
+}
+
+.home-body {
+  p,
+  h3 {
+    padding-left: 50px;
+  }
+}
+
+.calc-page {
+  padding: 0 50px;
+  margin-top: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  .calc-heading {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.calculator {
+  width: 600px;
 }
 
 .button-panel {
   margin-top: 0;
   padding: 0;
+  width: 100%;
+  width: 600px;
 
   .button-row {
-    max-width: 240px;
+    width: 100%;
 
-    .calc-button {
+    .button {
       width: 25%;
-      height: 25px;
+      height: 70px;
       cursor: unset;
-      font-size: 12px;
+      font-size: 14px;
       font-weight: bold;
     }
 
@@ -44,46 +92,21 @@ html {
 }
 
 .display {
-  margin-top: 30px;
+  width: 100%;
+  height: 70px;
   outline: none;
-  width: 240px;
-  height: 25px;
   color: #fff;
-  text-align: right;
+  font-size: 24px;
   margin-bottom: 0;
-  font-size: 18px;
+  padding: 0 12px;
+  text-align: right;
   font-weight: bold;
-  line-height: 25px;
+  line-height: 100px;
   background-color: #889;
   border: 1px solid #999;
 }
 
-@media (min-width: $breakpoint-tablet) {
-  .app {
-    max-width: 400px;
-  }
-
-  .button-panel {
-    .button-row {
-      max-width: 400px;
-
-      .calc-button {
-        height: 50px;
-        font-size: 14px;
-      }
-
-      .zero {
-        width: 50%;
-      }
-    }
-  }
-
-  .display {
-    margin-top: 40px;
-    width: 400px;
-    height: 50px;
-    margin-bottom: 0;
-    font-size: 24px;
-    line-height: 50px;
-  }
+.quote-body {
+  margin-top: 50px;
+  text-align: center;
 }

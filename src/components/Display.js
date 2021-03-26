@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// import '../assets/Display.css';
 
 const Display = ({ val }) => (
-  <button type="button" className="display">{val}</button>
+  <div className="display">{val}</div>
 );
 
 Display.propTypes = {
