@@ -30,7 +30,7 @@ const operate = (numberOne, numberTwo, operation) => {
       break;
 
     case '+':
-      result = firstNumber + secondNumber;
+      result = Math.abs(firstNumber) + Math.abs(secondNumber);
       break;
 
     default:
