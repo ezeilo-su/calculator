@@ -1,5 +1,7 @@
 # Calculator App in React
 
+![Calculator page](calculator.png)
+
 In this milestone, the following tasks were done:
 
 - Complete implementation of the following modules ```calculate``` ```operate``` in the ```logic``` directory.
