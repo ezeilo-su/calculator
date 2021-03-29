@@ -13,8 +13,8 @@ const calculate = (calcData, buttonName) => {
 
   switch (buttonName) {
     case '+/-':
-      return { total: next ? total : total * -1, next: next ? next * -1 : next };
-
+      return { total: next ? total : (total * -1).toString(), next: next ? (next * -1).toString() : next };
+    case '%':
     case '÷':
     case '×':
     case '-':
@@ -23,16 +23,9 @@ const calculate = (calcData, buttonName) => {
       if (!total) {
         return {};
       }
-      total = operate(total, next, operation);
-      return { total, next: null, operation: buttonName };
+      return { total: operate(total, next, operation), next: null, operation: buttonName };
 
     default:
-      if (total && buttonName === '%') {
-        return { total: operate(total, next, buttonName), operation: '=' };
-      }
-      if (buttonName === '%') {
-        return {};
-      }
 
       if (!Number.isNaN(buttonName)) {
         if (operation === '=') {
