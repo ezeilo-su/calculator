@@ -1,20 +1,27 @@
 import Big from 'big.js';
 
 const operate = (numberOne, numberTwo, operation) => {
-  if (!Number(numberTwo)) {
+  if (!Number(numberTwo) && operation !== '%' && operation !== '÷') {
     return numberOne;
   }
 
-  let result;
-  const firstNumber = new Big(numberOne);
-  const secondNumber = new Big(numberTwo);
+  let result = '0';
+  const firstNumber = Big(Number(numberOne));
+  const secondNumber = Big(Number(numberTwo));
 
   switch (operation) {
     case '%':
-      result = firstNumber * Big(0.01);
+      if (Number(numberTwo)) {
+        result = secondNumber * Big(0.01);
+      } else if (Number(numberOne)) {
+        result = firstNumber * Big(0.01);
+      }
       break;
 
     case '÷':
+      if (numberTwo === null) {
+        return numberOne;
+      }
       if (Number(numberTwo) === 0) {
         return 'Math Error';
       }
@@ -30,7 +37,7 @@ const operate = (numberOne, numberTwo, operation) => {
       break;
 
     case '+':
-      result = firstNumber + secondNumber;
+      result = Math.abs(firstNumber) + Math.abs(secondNumber);
       break;
 
     default:

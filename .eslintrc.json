@@ -22,7 +22,9 @@
 		"no-shadow": "off",
 		"prefer-const": "off",
 		"react/destructuring-assignment": "off",
-		"arrow-parens": ["error", "as-needed"]
+		"arrow-parens": ["error", "as-needed"],
+		"react/no-array-index-key": "off",
+		"max-len": "off"
 	},
 	"ignorePatterns": [
 		"dist/",
