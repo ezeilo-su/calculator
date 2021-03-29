@@ -26,7 +26,8 @@ const Calculator = () => {
       <h3 className="calc-heading">Let’s do some math!</h3>
       <div className="calculator">
         <Display
-          val={state.operation && state.next ? state.next : state.total || '0'}
+          val={state.operation && state.next ? state.next
+            : state.total || '0'}
         />
         <ButtonPanel clickHandler={handleClick} />
       </div>

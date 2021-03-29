@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Home from '../components/Home';
 
-test('Componenet renders correctly', () => {
+test('Component renders correctly', () => {
   const component = renderer.create(
     <Home />,
   );

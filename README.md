@@ -2,11 +2,11 @@
 
 ![Calculator page](calculator.png)
 
-In this milestone, the following tasks were done:
+In this project:
 
-- Complete implementation of the following modules ```calculate``` ```operate``` in the ```logic``` directory.
+- a basic calculator app was built
 
-- Finish implementing the basic calculator functionality.
+- app was fully tested using jest
 
 
 ## 📝 Setup
@@ -47,9 +47,16 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 ### Built With
 
--	React
+- React
 
-- SASS    
+- React Hooks
+
+- SASS
+
+### Tested with
+
+- JEST
+
 
 ### Check out live demo [here](https://calculator-milestone.herokuapp.com/)
 
